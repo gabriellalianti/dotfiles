@@ -22,7 +22,7 @@ alias gc='git checkout'
 alias gcb='git checkout -b'
 alias gr='git restore'
 
-alias cmprp='cd ~/code/comp'
+alias comp='cd ~/code/comp'
 
 # eza and zoxide for ls and cd, starship
 alias ls="eza --icons=auto"
