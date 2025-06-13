@@ -4,6 +4,10 @@ local config = wezterm.config_builder()
 --- config.color_scheme = "rose-pine-moon"
 -- config.color_scheme = 'AdventureTime'
 config.color_scheme = "Tokyo Night"
+-- config.color_scheme = "Gruber (base16)"
+-- config.color_scheme = "Gruvbox Material (Gogh)"
+-- config.color_scheme = "Gruvbox Dark (Gogh)"
+-- config.color_scheme = "Guezwhoz"
 
 config.window_decorations = "RESIZE"
 
