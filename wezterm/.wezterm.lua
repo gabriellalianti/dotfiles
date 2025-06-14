@@ -1,6 +1,19 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
+local target = wezterm.target_triple
+local hostname = wezterm.hostname()
+if target:find("windows") then
+	-- WSL
+	config.default_prog = { "wsl.exe", "~" }
+	config.font_size = 10
+elseif target:find("apple") then
+	-- macOS
+	config.font = wezterm.font("MesloLGS Nerd Font Mono")
+	config.font_size = 14
+	config.window_decorations = "RESIZE"
+end
+
 --- config.color_scheme = "rose-pine-moon"
 -- config.color_scheme = 'AdventureTime'
 config.color_scheme = "Tokyo Night"
@@ -9,10 +22,6 @@ config.color_scheme = "Tokyo Night"
 -- config.color_scheme = "Gruvbox Dark (Gogh)"
 -- config.color_scheme = "Guezwhoz"
 
-config.window_decorations = "RESIZE"
-
-config.font = wezterm.font("MesloLGS Nerd Font Mono")
-config.font_size = 14
 config.window_background_opacity = 0.96
 
 config.inactive_pane_hsb = {

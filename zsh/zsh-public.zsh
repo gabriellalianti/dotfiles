@@ -28,14 +28,25 @@ alias c3231='cd ~/code/comp/comp3231'
 alias d3231='cd ~/cs3231/'
 alias c6841='cd ~/code/comp/comp6841'
 
+# detect platform
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  HOMEBREW_PREFIX="/opt/homebrew"
+else
+  HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
+fi
+
 # eza and zoxide for ls and cd, starship
+eval "$($HOMEBREW_PREFIX/bin/brew shellenv)"
 alias ls="eza --icons=auto"
 eval "$(zoxide init zsh --cmd cd)"
-eval "$(starship init zsh)" 
+eval "$(starship init zsh)"
 
 # syntax
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+# copy wezterm config from wsl to windows
+alias sync-wezterm="cp ~/.dotfiles/wezterm/.wezterm.lua /mnt/c/Users/Gabriella/.wezterm.lua"
 
 # history setup
 HISTFILE=$HOME/.zhistory
