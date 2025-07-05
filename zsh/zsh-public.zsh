@@ -21,7 +21,7 @@ alias gpo='git push -u origin'
 alias gc='git checkout'
 alias gcb='git checkout -b'
 alias gr='git restore'
-alias gcln = 'git clone'
+alias gcln='git clone'
 
 alias dotf='cd dotfiles'
 alias comp='cd ~/code/comp'
