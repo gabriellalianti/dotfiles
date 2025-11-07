@@ -25,9 +25,12 @@ alias gcln='git clone'
 
 alias dotf='cd dotfiles'
 alias comp='cd ~/code/comp'
+alias repos='cd ~/code/repos'
 alias c3231='cd ~/code/comp/comp3231'
 alias d3231='cd ~/cs3231/'
 alias c6841='cd ~/code/comp/comp6841'
+alias cfre='cd ~/code/repos/freerooms-mobile'
+alias cios='cd ~/code/repos/freerooms-mobile/ios'
 
 # detect platform
 if [[ "$OSTYPE" == "darwin"* ]]; then
