@@ -28,13 +28,12 @@ alias oopss='git reset --soft HEAD~1'
 alias oopsh='git reset --hard HEAD~1'
 
 alias dotf='cd dotfiles'
-alias comp='cd ~/code/comp'
-alias repos='cd ~/code/repos'
-alias c3231='cd ~/code/comp/comp3231'
-alias d3231='cd ~/cs3231/'
-alias c6841='cd ~/code/comp/comp6841'
-alias cfre='cd ~/code/repos/freerooms-mobile'
-alias cios='cd ~/code/repos/freerooms-mobile/ios'
+# alias comp='cd ~/code/comp'
+alias repos='cd ~/repos'
+alias cfre='cd ~/repos/freerooms-mobile'
+alias cios='cd ~/repos/freerooms-mobile/ios'
+
+alias py3='python3'
 
 # detect platform
 if [[ "$OSTYPE" == "darwin"* ]]; then
