@@ -9,7 +9,9 @@ if target:find("windows") then
 	config.font_size = 10
 elseif target:find("apple") then
 	-- macOS
-	config.font = wezterm.font("MesloLGS Nerd Font Mono")
+	-- config.font = wezterm.font("MesloLGS Nerd Font Mono")
+	config.font = wezterm.font("JetBrainsMono Nerd Font")
+
 	config.font_size = 14
 	config.window_decorations = "RESIZE"
 end
