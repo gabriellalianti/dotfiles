@@ -42,10 +42,10 @@ config.keys = {
 	{ key = ";", mods = "CMD", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 	{ key = "'", mods = "CMD", action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
 	-- pane navs
-	{ key = "h", mods = "CMD|ALT", action = wezterm.action.ActivatePaneDirection("Left") },
-	{ key = "l", mods = "CMD|ALT", action = wezterm.action.ActivatePaneDirection("Right") },
-	{ key = "k", mods = "CMD|ALT", action = wezterm.action.ActivatePaneDirection("Up") },
-	{ key = "j", mods = "CMD|ALT", action = wezterm.action.ActivatePaneDirection("Down") },
+	{ key = "h", mods = "CMD|ALT|CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Left") },
+	{ key = "l", mods = "CMD|ALT|CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Right") },
+	{ key = "k", mods = "CMD|ALT|CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Up") },
+	{ key = "j", mods = "CMD|ALT|CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Down") },
 }
 
 return config
