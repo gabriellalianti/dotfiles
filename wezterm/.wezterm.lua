@@ -39,8 +39,8 @@ config.keys = {
 
 	-- split panes
 	{ key = "l", mods = "ALT", action = wezterm.action.SendString("\x1bf") },
-	{ key = ";", mods = "CMD", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-	{ key = "'", mods = "CMD", action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
+	{ key = "'", mods = "CMD", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	{ key = ";", mods = "CMD", action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
 	-- pane navs
 	{ key = "h", mods = "CMD|ALT|CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Left") },
 	{ key = "l", mods = "CMD|ALT|CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Right") },
