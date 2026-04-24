@@ -37,8 +37,8 @@ alias dcdv='docker compose down -v'
 
 alias dotf='cd dotfiles'
 alias repos='cd ~/repos'
-alias cfre='cd ~/repos/freerooms-mobile'
-alias cios='cd ~/repos/freerooms-mobile/ios'
+alias cfre='cd ~/repos/devsoc/freerooms-mobile'
+alias cios='cd ~/repos/devsoc/freerooms-mobile/ios'
 alias coup='cd ~/repos/pouc'
 
 alias py3='python3'
