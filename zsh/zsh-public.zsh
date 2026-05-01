@@ -113,6 +113,10 @@ setopt hist_verify
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
+# hide and show desktop files 
+alias hidedtop='defaults write com.apple.finder CreateDesktop FALSE; killall Finder'
+alias showdtop='defaults write com.apple.finder CreateDesktop TRUE; killall Finder'
+
 # cowsay greeting hell yeah
 # if command -v fortune &>/dev/null && command -v cowsay &>/dev/null; then
 #     # choose randomly betw cowsay and cowthink
