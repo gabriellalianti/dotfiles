@@ -36,10 +36,13 @@ alias dcd='docker compose down'
 alias dcdv='docker compose down -v'
 
 alias dotf='cd dotfiles'
+alias nvpub='nvim ~/.dotfiles/zsh/zsh-public.zsh'
+alias nvpriv='nvim ~/.dotfiles/zsh/zsh-private.zsh'
 alias repos='cd ~/repos'
 alias cfre='cd ~/repos/devsoc/freerooms-mobile'
 alias cios='cd ~/repos/devsoc/freerooms-mobile/ios'
 alias coup='cd ~/repos/pouc'
+alias 6991='cd ~/repos/comp6991'
 
 alias py3='python3'
 
