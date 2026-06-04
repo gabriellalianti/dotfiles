@@ -45,6 +45,14 @@ alias coup='cd ~/repos/pouc'
 alias 6991='cd ~/repos/comp6991'
 
 alias py3='python3'
+alias crun='cargo run'
+alias cnew='cargo new'
+alias cch='cargo check'
+alias cfmt='cargo fmt'
+alias cbld='cargo build'
+alias cdoc='cargo doc --open'
+
+alias cser='cserun'
 
 # detect platform
 if [[ "$OSTYPE" == "darwin"* ]]; then
