@@ -7,6 +7,7 @@ bindkey -v
 # aliases
 alias cl='clear'
 alias cb='cd ..'
+alias cv='cd -'
 
 alias gs='git status'
 alias gb='git branch'
