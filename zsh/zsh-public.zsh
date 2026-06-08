@@ -50,9 +50,12 @@ alias cnew='cargo new'
 alias cch='cargo check'
 alias cfmt='cargo fmt'
 alias cbld='cargo build'
+alias cadd='cargo add'
 alias cdoc='cargo doc --open'
 
 alias cser='cserun'
+alias cseatt="cser '6991 autotest'"
+alias csegive="cser '6991 give-crate'"
 
 # detect platform
 if [[ "$OSTYPE" == "darwin"* ]]; then
