@@ -8,6 +8,7 @@ bindkey -v
 alias cl='clear'
 alias cb='cd ..'
 alias cv='cd -'
+alias l='ls'
 
 alias gs='git status'
 alias gb='git branch'
@@ -46,17 +47,22 @@ alias coup='cd ~/repos/pouc'
 alias 6991='cd ~/repos/comp6991'
 
 alias py3='python3'
-alias crun='cargo run'
-alias cnew='cargo new'
-alias cch='cargo check'
-alias cfmt='cargo fmt'
-alias cbld='cargo build'
-alias cadd='cargo add'
-alias cdoc='cargo doc --open'
+alias cgr='cargo run'
+alias cgn='cargo new'
+alias cgc='cargo check'
+alias cgf='cargo fmt'
+alias cgb='cargo build'
+alias cga='cargo add'
+alias cgd='cargo doc --open'
+alias cgt='cargo test'
+alias rud='rustup doc'
+alias ruds='rustup doc --std'
+alias rudb='rustup doc --book'
 
 alias cser='cserun'
-alias cseatt="cser '6991 autotest'"
-alias csegive="cser '6991 give-crate'"
+alias csea="cser '6991 autotest'"
+alias cseg="cser '6991 give-crate'"
+alias csec="cser '6991 classrun -sturec'"
 
 # detect platform
 if [[ "$OSTYPE" == "darwin"* ]]; then
