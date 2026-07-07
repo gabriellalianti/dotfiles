@@ -32,13 +32,13 @@ config.inactive_pane_hsb = {
 }
 
 config.keys = {
-	{ key = "h", mods = "CMD", action = wezterm.action.SendString("\x01") }, -- for ctrl+a
-	{ key = "l", mods = "CMD", action = wezterm.action.SendString("\x05") }, -- for ctrl+e
-	{ key = "d", mods = "CMD", action = wezterm.action.SendString("\x15") }, -- for ctrl+u
-	{ key = "h", mods = "ALT", action = wezterm.action.SendString("\x1bb") }, -- for esc+b
+	-- { key = "LeftArrow", mods = "CMD", action = wezterm.action.SendString("\x01") }, -- for ctrl+a
+	-- { key = "RightArrow", mods = "CMD", action = wezterm.action.SendString("\x05") }, -- for ctrl+e
+	-- { key = "d", mods = "CMD", action = wezterm.action.SendString("\x15") }, -- for ctrl+u
+	-- { key = "h", mods = "ALT", action = wezterm.action.SendString("\x1bb") }, -- for esc+b
+	-- { key = "l", mods = "ALT", action = wezterm.action.SendString("\x1bf") }, -- for esc+f
 
 	-- split panes
-	{ key = "l", mods = "ALT", action = wezterm.action.SendString("\x1bf") },
 	{ key = "'", mods = "CMD", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 	{ key = ";", mods = "CMD", action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
 	-- pane navs
