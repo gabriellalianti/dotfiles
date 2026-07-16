@@ -59,10 +59,11 @@ alias rud='rustup doc'
 alias ruds='rustup doc --std'
 alias rudb='rustup doc --book'
 
-alias cser='cserun'
-alias csea="cser '6991 autotest'"
-alias cseg="cser '6991 give-crate'"
-alias csec="cser '6991 classrun -sturec'"
+alias csel='cselab'
+alias csea="csel run '6991 autotest'"
+alias cseg="csel run '6991 give-crate'"
+alias csec="csel run '6991 classrun -sturec'"
+alias csec='cselab clean'
 
 # detect platform
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -138,7 +139,7 @@ bindkey '^[[B' history-search-forward
 alias hidedtop='defaults write com.apple.finder CreateDesktop FALSE; killall Finder'
 alias showdtop='defaults write com.apple.finder CreateDesktop TRUE; killall Finder'
 
-# cowsay greeting hell yeah
+# cowsay greeting
 # if command -v fortune &>/dev/null && command -v cowsay &>/dev/null; then
 #     # choose randomly betw cowsay and cowthink
 #     cowprog=$(shuf -e cowsay cowthink -n 1)
@@ -206,4 +207,4 @@ function zsh_greeting() {
   echo
 }
 
-zsh_greeting
+# zsh_greeting
