@@ -18,11 +18,14 @@ end
 
 --- config.color_scheme = "rose-pine-moon"
 -- config.color_scheme = 'AdventureTime'
-config.color_scheme = "Tokyo Night"
+-- config.color_scheme = "Tokyo Night"
+-- config.color_scheme = "Tokyo Night Moon"
 -- config.color_scheme = "Gruber (base16)"
 -- config.color_scheme = "Gruvbox Material (Gogh)"
 -- config.color_scheme = "Gruvbox Dark (Gogh)"
 -- config.color_scheme = "Guezwhoz"
+-- config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = "Catppuccin Frappe"
 
 config.window_background_opacity = 0.96
 
