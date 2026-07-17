@@ -1,6 +1,12 @@
 
 function icon_map() {
   case "$1" in
+  "Zen")
+    icon_result=":zen_browser:"
+    ;;
+  "ChatGPT")
+    icon_result=":openai:"
+    ;;
   "Keynote" | "Keynote 讲演")
     icon_result=":keynote:"
     ;;
