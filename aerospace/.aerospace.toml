@@ -59,7 +59,7 @@ automatically-unhide-macos-hidden-apps = false
 # even when they are invisible.
 # This config option is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
-persistent-workspaces = ["1", "2", "3", "C", "D"]
+persistent-workspaces = ["A", "C", "D", "X", "Z"]
 
 # A callback that runs every time binding mode changes
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -141,11 +141,11 @@ gaps.outer.right =      4
     alt-equal = 'resize smart +50'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-    alt-1 = 'workspace 1'
-    alt-2 = 'workspace 2'
-    alt-3 = 'workspace 3'
+    alt-a = 'workspace A'
     alt-c = 'workspace C'
     alt-d = 'workspace D'
+    alt-x = 'workspace X'
+    alt-z = 'workspace Z'
 
     # Reset sizes to be perfectly equal
     alt-0 = 'balance-sizes'
@@ -160,11 +160,11 @@ gaps.outer.right =      4
     alt-shift-l = 'join-with right'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-    alt-shift-1 = 'move-node-to-workspace 1'
-    alt-shift-2 = 'move-node-to-workspace 2'
-    alt-shift-3 = 'move-node-to-workspace 3'
+    alt-shift-a = 'move-node-to-workspace A'
     alt-shift-c = 'move-node-to-workspace C'
     alt-shift-d = 'move-node-to-workspace D'
+    alt-shift-x = 'move-node-to-workspace X'
+    alt-shift-z = 'move-node-to-workspace Z'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     alt-tab = 'workspace-back-and-forth'
