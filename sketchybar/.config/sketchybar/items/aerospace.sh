@@ -13,7 +13,10 @@ done
 for sid in $WORKSPACES; do
   sketchybar \
     --add item "space.$sid" left \
-    --subscribe "space.$sid" aerospace_workspace_change front_app_switched \
+    --subscribe "space.$sid" \
+      aerospace_workspace_change \
+      front_app_switched \
+      space_windows_change \
     --set "space.$sid" \
       icon="$sid" \
       label.drawing=on \
