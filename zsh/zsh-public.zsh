@@ -38,8 +38,8 @@ alias dcd='docker compose down'
 alias dcdv='docker compose down -v'
 
 alias dotf='cd dotfiles'
-alias nvpub='nvim ~/.dotfiles/zsh/zsh-public.zsh'
-alias nvpriv='nvim ~/.dotfiles/zsh/zsh-private.zsh'
+alias nvpub='nvim ~/dotfiles/zsh/zsh-public.zsh'
+alias nvpriv='nvim ~/dotfiles/zsh/zsh-private.zsh'
 alias repos='cd ~/repos'
 alias cfre='cd ~/repos/devsoc/freerooms-mobile'
 alias cios='cd ~/repos/devsoc/freerooms-mobile/ios'
@@ -121,7 +121,7 @@ _fzf_comprun() {
 }
 
 # copy wezterm config from wsl to windows
-alias sync-wezterm="cp ~/.dotfiles/wezterm/.wezterm.lua /mnt/c/Users/Gabriella/.wezterm.lua"
+alias sync-wezterm="cp ~/dotfiles/wezterm/.wezterm.lua /mnt/c/Users/Gabriella/.wezterm.lua"
 
 # history setup
 HISTFILE=$HOME/.zhistory
