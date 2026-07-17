@@ -1,10 +1,12 @@
 #!/bin/bash
 
 WHITE=0xffffffff
+BLACK=0xff000000
 CLEAR=0x00000000
 
 BG=0xf5303446
 RED=0xffe78284
+GREEN=0xffa6d189
 AQUA=0xff82c7bd
 PINK=0xfff3b8e4
 YELLOW=0xffe4c890
