@@ -53,6 +53,13 @@ for item in calendar volume battery cpu; do
         background.drawing=off
 done
 
+sketchybar --set volume \
+           label.padding_right=10
+
+sketchybar --set calendar \
+           icon.drawing=off \
+           label.padding_left=10
+
 sketchybar --add bracket system_status calendar volume battery cpu \
            --set system_status \
                  background.drawing=on
