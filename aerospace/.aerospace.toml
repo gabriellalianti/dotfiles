@@ -59,7 +59,7 @@ automatically-unhide-macos-hidden-apps = false
 # even when they are invisible.
 # This config option is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
-persistent-workspaces = ["1", "2", "3", "4", "5", "6"]
+persistent-workspaces = ["1", "2", "3", "A", "C", "D"]
 
 # A callback that runs every time binding mode changes
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -144,9 +144,9 @@ gaps.outer.right =      4
     alt-1 = 'workspace 1'
     alt-2 = 'workspace 2'
     alt-3 = 'workspace 3'
-    alt-q = 'workspace 4'
-    alt-w = 'workspace 5'
-    alt-e = 'workspace 6'
+    alt-a = 'workspace A'
+    alt-c = 'workspace C'
+    alt-d = 'workspace D'
 
     # Reset sizes to be perfectly equal
     alt-0 = 'balance-sizes'
@@ -161,12 +161,30 @@ gaps.outer.right =      4
     alt-shift-l = 'join-with right'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-    alt-shift-1 = 'move-node-to-workspace 1'
-    alt-shift-2 = 'move-node-to-workspace 2'
-    alt-shift-3 = 'move-node-to-workspace 3'
-    alt-shift-q = 'move-node-to-workspace 4'
-    alt-shift-w = 'move-node-to-workspace 5'
-    alt-shift-e = 'move-node-to-workspace 6'
+    alt-shift-1 = [
+        'move-node-to-workspace 1',
+        'exec-and-forget sketchybar --trigger aerospace_workspace_change',
+    ]
+    alt-shift-2 = [
+        'move-node-to-workspace 2',
+        'exec-and-forget sketchybar --trigger aerospace_workspace_change',
+    ]
+    alt-shift-3 = [
+        'move-node-to-workspace 3',
+        'exec-and-forget sketchybar --trigger aerospace_workspace_change',
+    ]
+    alt-shift-a = [
+        'move-node-to-workspace A',
+        'exec-and-forget sketchybar --trigger aerospace_workspace_change',
+    ]
+    alt-shift-c = [
+        'move-node-to-workspace C',
+        'exec-and-forget sketchybar --trigger aerospace_workspace_change',
+    ]
+    alt-shift-d = [
+        'move-node-to-workspace D',
+        'exec-and-forget sketchybar --trigger aerospace_workspace_change',
+    ]
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     alt-tab = 'workspace-back-and-forth'
