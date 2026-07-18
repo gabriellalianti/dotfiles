@@ -59,7 +59,7 @@ automatically-unhide-macos-hidden-apps = false
 # even when they are invisible.
 # This config option is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
-persistent-workspaces = ["1", "2", "3", "A", "C", "D"]
+persistent-workspaces = ["1", "2", "3", "4", "C", "D"]
 
 # A callback that runs every time binding mode changes
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -144,7 +144,7 @@ gaps.outer.right =      4
     alt-1 = 'workspace 1'
     alt-2 = 'workspace 2'
     alt-3 = 'workspace 3'
-    alt-a = 'workspace A'
+    alt-4 = 'workspace 4'
     alt-c = 'workspace C'
     alt-d = 'workspace D'
 
@@ -173,8 +173,8 @@ gaps.outer.right =      4
         'move-node-to-workspace 3',
         'exec-and-forget sketchybar --trigger aerospace_workspace_change',
     ]
-    alt-shift-a = [
-        'move-node-to-workspace A',
+    alt-shift-4 = [
+        'move-node-to-workspace 4',
         'exec-and-forget sketchybar --trigger aerospace_workspace_change',
     ]
     alt-shift-c = [
