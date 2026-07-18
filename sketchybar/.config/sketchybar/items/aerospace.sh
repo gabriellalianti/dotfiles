@@ -33,4 +33,4 @@ sketchybar --add bracket aerospace_workspaces '/space\..*/' \
            --set aerospace_workspaces \
                  padding_left=0 \
                  padding_right=0 \
-                 background.drawing=on
+                 background.drawing=on \

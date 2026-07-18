@@ -62,12 +62,15 @@ for item in calendar volume battery cpu; do
     sketchybar --set "$item" \
         padding_left=0 \
         padding_right=0 \
-        background.drawing=off
+        icon.color=$BLACK \
+        label.color=$BLACK \
+        background.padding_left=4 \
+        background.padding_right=0
 done
 
 sketchybar --add bracket system_status calendar volume battery cpu \
            --set system_status \
-                 background.drawing=on
+                 background.drawing=off
 
 # Restart the persistent calendar helper whenever sketchybar reloads
 pkill -x sketchybar-calendar 2>/dev/null
