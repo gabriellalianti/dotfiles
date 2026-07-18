@@ -29,7 +29,9 @@ if [[ "$SID" == "$CURRENT_WORKSPACE" ]]; then
   sketchybar --set "$NAME" \
     background.drawing=off \
     background.color="$TEXT_COLOR_ACTIVE" \
-    label="$ICON_STRIP"
+    label="$ICON_STRIP" \
+    icon.color=$BLACK \
+    label.color=$BLACK
 else
   sketchybar --set "$NAME" \
     background.drawing=off \
