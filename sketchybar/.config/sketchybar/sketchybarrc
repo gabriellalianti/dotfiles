@@ -53,12 +53,13 @@ source $ITEM_DIR/front_app.sh
 
 # Right items
 source $ITEM_DIR/calendar.sh
-source $ITEM_DIR/volume.sh
+# source $ITEM_DIR/volume.sh
 source $ITEM_DIR/battery.sh
+source $ITEM_DIR/ram.sh
 source $ITEM_DIR/cpu.sh
 
 # Right group
-for item in calendar volume battery cpu; do
+for item in calendar battery ram cpu; do
     sketchybar --set "$item" \
         padding_left=0 \
         padding_right=0 \
@@ -68,7 +69,7 @@ for item in calendar volume battery cpu; do
         background.padding_right=0
 done
 
-sketchybar --add bracket system_status calendar volume battery cpu \
+sketchybar --add bracket system_status calendar battery ram cpu \
            --set system_status \
                  background.drawing=off
 
