@@ -124,7 +124,7 @@ function icon_map() {
   "LibreWolf")
     icon_result=":libre_wolf:"
     ;;
-  "Notes" | "备忘录")
+  "Notes" | "备忘录" | "Stickies")
     icon_result=":notes:"
     ;;
   "Notion")
@@ -205,7 +205,7 @@ function icon_map() {
   "MAMP" | "MAMP PRO")
     icon_result=":mamp:"
     ;;
-  "Canary Mail" | "HEY" | "Mail" | "Mailspring" | "MailMate" | "邮件")
+  "Canary Mail" | "HEY" | "Mail" | "Mailspring" | "MailMate" | "邮件" | "Microsoft Outlook")
     icon_result=":mail:"
     ;;
   "WebStorm")
@@ -427,7 +427,7 @@ function icon_map() {
   "Nova")
     icon_result=":nova:"
     ;;
-  "WhatsApp")
+  "WhatsApp" | *"WhatsApp")
     icon_result=":whats_app:"
     ;;
   *)
