@@ -216,3 +216,7 @@ gaps.outer.right =      4
 [[on-window-detected]]
 if.app-id = 'com.apple.iphonesimulator'
 run = 'layout tiling'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Stickies'
+run = 'layout tiling'
