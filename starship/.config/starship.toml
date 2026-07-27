@@ -1,5 +1,12 @@
 command_timeout = 3000
 
+# format = """
+# [╭─](cyan)$all
+# [╰─](cyan)$character
+# """
+# [line_break]
+# disabled = true
+
 [aws]
 symbol = "  "
 
