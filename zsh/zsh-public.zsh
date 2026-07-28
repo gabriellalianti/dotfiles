@@ -59,10 +59,10 @@ alias rud='rustup doc'
 alias ruds='rustup doc --std'
 alias rudb='rustup doc --book'
 
-alias csel='cselab'
-alias csea="csel run '6991 autotest'"
-alias cseg="csel run '6991 give-crate'"
-alias csec="csel run '6991 classrun -sturec'"
+alias cser='cselab run'
+alias csea="cser '6991 autotest'"
+alias cseg="cser '6991 give-crate'"
+alias csem="cser '6991 classrun -sturec'"
 alias csec='cselab clean'
 
 # detect platform
