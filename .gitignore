@@ -1,3 +1,4 @@
 zsh/zsh-private.zsh
 nvim/.config/nvim/lazyvim.json
+nvim.log
 .DS_Store
