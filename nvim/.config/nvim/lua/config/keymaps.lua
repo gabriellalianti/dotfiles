@@ -5,3 +5,9 @@
 -- MarkdownPreview
 vim.keymap.set("n", "<leader>mp", "<cmd>MarkdownPreview<CR>", { desc = "Start Markdown Preview" })
 vim.keymap.set("n", "<leader>mps", "<cmd>MarkdownPreviewStop<CR>", { desc = "Stop Markdown Preview" })
+
+vim.keymap.set("n", "gl", function()
+  vim.diagnostic.open_float({ border = "rounded" })
+end, {
+  desc = "Line diagnostics",
+})

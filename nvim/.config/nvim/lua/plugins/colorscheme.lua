@@ -12,10 +12,26 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
+    init = function()
+      vim.api.nvim_create_autocmd("User", {
+        pattern = "VeryLazy",
+        once = true,
+        callback = function()
+          vim.cmd.colorscheme("catppuccin")
+        end,
+      })
+    end,
     opts = {
-      flavour = "macchiato",
+      -- flavour = "macchiato",
       -- flavour = "frappe",
-      -- flavour = "mocha",
+      flavour = "mocha",
+      custom_highlights = function(colors)
+        return {
+          NormalFloat = { bg = colors.crust },
+          FloatBorder = { fg = colors.text, bg = colors.crust },
+          FloatTitle = { fg = colors.text, bg = colors.crust },
+        }
+      end,
     },
   },
   {
