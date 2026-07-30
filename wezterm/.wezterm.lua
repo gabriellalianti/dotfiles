@@ -25,7 +25,8 @@ end
 -- config.color_scheme = "Gruvbox Dark (Gogh)"
 -- config.color_scheme = "Guezwhoz"
 -- config.color_scheme = "Catppuccin Mocha"
-config.color_scheme = "Catppuccin Frappe"
+-- config.color_scheme = "Catppuccin Frappe"
+config.color_scheme = "Catppuccin Macchiato"
 
 config.window_background_opacity = 0.96
 
