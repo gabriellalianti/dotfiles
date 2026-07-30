@@ -65,25 +65,19 @@ alias cseg="cser '6991 give-crate'"
 alias csem="cser '6991 classrun -sturec'"
 alias csec='cselab clean'
 
-# detect platform
+# hide and show desktop files
+alias hidedtop='defaults write com.apple.finder CreateDesktop FALSE; killall Finder'
+alias showdtop='defaults write com.apple.finder CreateDesktop TRUE; killall Finder'
+
+# homebrew
 if [[ "$OSTYPE" == "darwin"* ]]; then
   HOMEBREW_PREFIX="/opt/homebrew"
 else
   HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
 fi
-
-# eza and zoxide for ls and cd, starship
 eval "$($HOMEBREW_PREFIX/bin/brew shellenv)"
-alias ls="eza --icons=auto"
-eval "$(zoxide init zsh --cmd cd)"
-eval "$(starship init zsh)"
-
-# syntax
-source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
-source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-
-# thefuck (cmd correction lol)
-eval $(thefuck --alias shibal)
+# copy wezterm config from wsl to windows
+alias sync-wezterm="cp ~/dotfiles/wezterm/.wezterm.lua /mnt/c/Users/Gabriella/.wezterm.lua"
 
 # fuzzy find (ctrl+T) 
 # ssh **, cd **
@@ -105,6 +99,17 @@ _fzf_compgen_dir() {
 }
 # fzf with git
 source ~/fzf-git.sh/fzf-git.sh
+
+# tools
+alias ls="eza --icons=auto"         # better ls
+eval "$(zoxide init zsh --cmd cd)"  # better cd
+eval "$(starship init zsh)"
+eval $(thefuck --alias typo)        # cmd correction
+
+# syntax suggestions and highlighting
+source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
 # previews with eza and bat from josean martinez on yt : )
 show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
 export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
@@ -120,9 +125,6 @@ _fzf_comprun() {
   esac
 }
 
-# copy wezterm config from wsl to windows
-alias sync-wezterm="cp ~/dotfiles/wezterm/.wezterm.lua /mnt/c/Users/Gabriella/.wezterm.lua"
-
 # history setup
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
@@ -135,9 +137,7 @@ setopt hist_verify
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
-# hide and show desktop files 
-alias hidedtop='defaults write com.apple.finder CreateDesktop FALSE; killall Finder'
-alias showdtop='defaults write com.apple.finder CreateDesktop TRUE; killall Finder'
+
 
 # cowsay greeting
 # if command -v fortune &>/dev/null && command -v cowsay &>/dev/null; then
@@ -151,60 +151,60 @@ alias showdtop='defaults write com.apple.finder CreateDesktop TRUE; killall Find
 #     echo
 # fi
 
-function zsh_greeting() {
-  # Colors
-  normal='\033[0m'
-  red='\033[0;31m'
-  brred='\033[1;31m'
-  green='\033[0;32m'
-  brgreen='\033[1;32m'
-  yellow='\033[0;33m'
-  bryellow='\033[1;33m'
-  blue='\033[0;34m'
-  brblue='\033[1;34m'
-  magenta='\033[0;35m'
-  brmagenta='\033[1;35m'
-  cyan='\033[0;36m'
-  brcyan='\033[1;36m'
+# function zsh_greeting() {
+#   # Colors
+#   normal='\033[0m'
+#   red='\033[0;31m'
+#   brred='\033[1;31m'
+#   green='\033[0;32m'
+#   brgreen='\033[1;32m'
+#   yellow='\033[0;33m'
+#   bryellow='\033[1;33m'
+#   blue='\033[0;34m'
+#   brblue='\033[1;34m'
+#   magenta='\033[0;35m'
+#   brmagenta='\033[1;35m'
+#   cyan='\033[0;36m'
+#   brcyan='\033[1;36m'
 
-  # ascii art
-  cutiepies=(
-    '
-     ,_,
-    (O,O)
-    (   )
-    -"-"---dwb-
-    ' \
-    '
-    \|/          (__)    
-         `\------(oo)
-           ||    (__)
-           ||w--||     \|/
-       \|/
-    ' \
-    '
-     /\_/\
-    ( o.o )
-     > ^ <
-    '
-  )
-  # 1. RANDOM is biased toward the lower index
-  # 2. Array index in ZSH starts at 1
-  cutiepie=${cutiepies[ $(( RANDOM % ${#cutiepies[@]} + 1 )) ]}
+#   # ascii art
+#   cutiepies=(
+#     '
+#      ,_,
+#     (O,O)
+#     (   )
+#     -"-"---dwb-
+#     ' \
+#     '
+#     \|/          (__)
+#          `\------(oo)
+#            ||    (__)
+#            ||w--||     \|/
+#        \|/
+#     ' \
+#     '
+#      /\_/\
+#     ( o.o )
+#      > ^ <
+#     '
+#   )
+#   # 1. RANDOM is biased toward the lower index
+#   # 2. Array index in ZSH starts at 1
+#   cutiepie=${cutiepies[ $(( RANDOM % ${#cutiepies[@]} + 1 )) ]}
 
-  # Other info
-  my_hostname=$(hostname -s)
-  timestamp="$(date -I) $(date +"%T")"
-  uptime=$(uptime | grep -ohe 'up .*' | sed 's/,//g' | awk '{ print $2" "$3 " " }')
+#   # Other info
+#   my_hostname=$(hostname -s)
+#   timestamp="$(date -I) $(date +"%T")"
+#   uptime=$(uptime | grep -ohe 'up .*' | sed 's/,//g' | awk '{ print $2" "$3 " " }')
 
-  # Greeting msg
-  echo
-  echo -e "  " "$brgreen" "Welcome back $USER!"                       "$normal"
-  echo -e "  " "$brred"   "$cutiepie"                                 "$normal"
-  echo -e "  " "$yellow"  " Zsh Open:\t"   "$bryellow$timestamp"     "$normal"
-  echo -e "  " "$blue"    " Hostname:\t"   "$brmagenta$my_hostname"  "$normal"
-  echo -e "  " "$magenta" " Uptime  :\t"   "$brblue$uptime"          "$normal"
-  echo
-}
+#   # Greeting msg
+#   echo
+#   echo -e "  " "$brgreen" "Welcome back $USER!"                       "$normal"
+#   echo -e "  " "$brred"   "$cutiepie"                                 "$normal"
+#   echo -e "  " "$yellow"  " Zsh Open:\t"   "$bryellow$timestamp"     "$normal"
+#   echo -e "  " "$blue"    " Hostname:\t"   "$brmagenta$my_hostname"  "$normal"
+#   echo -e "  " "$magenta" " Uptime  :\t"   "$brblue$uptime"          "$normal"
+#   echo
+# }
 
 # zsh_greeting
