@@ -105,6 +105,7 @@ alias ls="eza --icons=auto"         # better ls
 eval "$(zoxide init zsh --cmd cd)"  # better cd
 eval "$(starship init zsh)"
 eval $(thefuck --alias typo)        # cmd correction
+eval "$(atuin init zsh)"            # override fzf's ctrl+r
 
 # syntax suggestions and highlighting
 source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
