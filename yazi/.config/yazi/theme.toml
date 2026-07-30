@@ -1,0 +1,12 @@
+[flavor]
+dark = "catppuccin-macchiato"
+light = "catppuccin-macchiato"
+
+# dark = "catppuccin-frappe"
+# light = "catppuccin-frappe"
+
+# dark = "catppuccin-mocha"
+# light = "catppuccin-mocha"
+
+[indicator]
+padding = { open = "▐", close = "▌" } # square highlights instead of rounded
