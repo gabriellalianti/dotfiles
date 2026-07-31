@@ -42,4 +42,11 @@ config.keys = {
 	{ key = "j", mods = "CMD|ALT|CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Down") },
 }
 
+config.window_padding = {
+	left = 16,
+	right = 0,
+	top = 0,
+	bottom = 0,
+}
+
 return config
