@@ -102,6 +102,7 @@ source ~/fzf-git.sh/fzf-git.sh
 
 # tools
 alias ls="eza --icons=auto"         # better ls
+alias lst="eza --icons=auto --tree"
 eval "$(zoxide init zsh --cmd cd)"  # better cd
 eval "$(starship init zsh)"
 eval $(thefuck --alias typo)        # cmd correction
@@ -124,6 +125,10 @@ _fzf_comprun() {
     ssh)          fzf --preview 'dig {}'                   "$@" ;;
     *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
   esac
+}
+
+function cx() {
+  cd "$1" && ls "${@:2}"
 }
 
 # yazi shell wrapper
