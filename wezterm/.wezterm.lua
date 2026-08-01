@@ -25,6 +25,9 @@ end
 config.color_scheme = "Catppuccin Macchiato"
 
 config.window_background_opacity = 0.96
+config.enable_tab_bar = true
+config.hide_tab_bar_if_only_one_tab = true
+config.adjust_window_size_when_changing_font_size = false
 
 config.inactive_pane_hsb = {
 	saturation = 0.85,
@@ -33,8 +36,8 @@ config.inactive_pane_hsb = {
 
 config.keys = {
 	-- split panes
-	{ key = "'", mods = "CMD", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-	{ key = ";", mods = "CMD", action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
+	{ key = ";", mods = "CMD", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	{ key = "'", mods = "CMD", action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
 	-- pane navs
 	{ key = "h", mods = "CMD|ALT|CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Left") },
 	{ key = "l", mods = "CMD|ALT|CTRL|SHIFT", action = wezterm.action.ActivatePaneDirection("Right") },
