@@ -1,14 +1,28 @@
+local opencode_cmd = "opencode --port"
+local terminal_opts = {
+  win = {
+    position = "right",
+    enter = false,
+  },
+}
+
 return {
   {
     "nickjvandyke/opencode.nvim",
     version = "*",
     config = function()
       ---@type opencode.Opts
-      vim.g.opencode_opts = {}
+      vim.g.opencode_opts = {
+        server = {
+          start = function()
+            require("snacks.terminal").open(opencode_cmd, terminal_opts)
+          end,
+        },
+      }
     end,
     keys = {
       {
-        "<leader>aa",
+        "<leader>oa",
         function()
           require("opencode").ask("@this: ")
         end,
@@ -16,7 +30,7 @@ return {
         desc = "Ask OpenCode",
       },
       {
-        "<leader>as",
+        "<leader>os",
         function()
           require("opencode").select()
         end,
@@ -24,7 +38,7 @@ return {
         desc = "Select OpenCode action",
       },
       {
-        "<leader>ao",
+        "<leader>oo",
         function()
           return require("opencode").operator("@this ")
         end,
@@ -33,7 +47,7 @@ return {
         desc = "Add range to OpenCode",
       },
       {
-        "<leader>aO",
+        "<leader>oO",
         function()
           return require("opencode").operator("@this ") .. "_"
         end,
@@ -41,18 +55,25 @@ return {
         desc = "Add line to OpenCode",
       },
       {
-        "<leader>au",
+        "<leader>ou",
         function()
           require("opencode").command("session.half.page.up")
         end,
         desc = "Scroll OpenCode up",
       },
       {
-        "<leader>ad",
+        "<leader>od",
         function()
           require("opencode").command("session.half.page.down")
         end,
         desc = "Scroll OpenCode down",
+      },
+      {
+        "<leader>ot",
+        function()
+          require("snacks.terminal").toggle(opencode_cmd, terminal_opts)
+        end,
+        desc = "Toggle OpenCode sidebar",
       },
     },
   },
