@@ -1,0 +1,10 @@
+[keys]
+prefix = "alt+space"
+split_vertical = "prefix+%"
+split_horizontal = 'prefix+"'
+
+[theme]
+name = "catppuccin"
+
+[terminal]
+new_cwd = "follow" # open new panes and tabs in the current pane/workspace dir
