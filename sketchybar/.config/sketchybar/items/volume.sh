@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 sketchybar --add item volume right \
-           --set volume \
-                 label.padding_right=10 \
-                 background.color=$RED \
-                 background.drawing=on \
-                 script="$PLUGIN_DIR/volume.sh" \
-           --subscribe volume volume_change
+           --subscribe volume volume_change \
+           --set volume icon="󰕾" \
+                 icon.color="$ICON_DARK_COLOR" \
+                 icon.background.color="$BLUE" \
+                 label.color="$TEXT_COLOR" \
+                 script="$CONFIG_DIR/plugins/volume.sh"

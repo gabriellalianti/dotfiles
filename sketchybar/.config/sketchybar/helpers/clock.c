@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <time.h>
 
-static void update_calendar(CFRunLoopTimerRef timer, void *info)
+static void update_clock(CFRunLoopTimerRef timer, void *info)
 {
     (void)timer;
     (void)info;
@@ -34,7 +34,7 @@ static void update_calendar(CFRunLoopTimerRef timer, void *info)
     int written = snprintf(
         message,
         sizeof(message),
-        "--set calendar label=\"%s\"",
+        "--set clock label=\"%s\"",
         date_buffer);
 
     if (written < 0 || (size_t)written >= sizeof(message))
@@ -60,12 +60,12 @@ int main(void)
         1.0,
         0,
         0,
-        update_calendar,
+        update_clock,
         NULL);
 
     if (timer == NULL)
     {
-        fprintf(stderr, "Failed to create calendar timer\n");
+        fprintf(stderr, "Failed to create clock timer\n");
         return 1;
     }
 
@@ -73,7 +73,7 @@ int main(void)
      * Display the current value immediately rather than waiting until the
      * next second boundary.
      */
-    update_calendar(NULL, NULL);
+    update_clock(NULL, NULL);
 
     CFRunLoopAddTimer(
         CFRunLoopGetMain(),

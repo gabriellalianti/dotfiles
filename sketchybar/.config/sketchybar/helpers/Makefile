@@ -2,8 +2,8 @@ CC := clang
 CFLAGS := -std=c99 -Wall -Wextra -Wpedantic -O2
 FRAMEWORKS := -framework CoreFoundation
 
-TARGET := sketchybar-calendar
-SOURCE := calendar.c
+TARGET := sketchybar-clock
+SOURCE := clock.c
 HEADER := sketchybar.h
 
 .PHONY: all clean rebuild
