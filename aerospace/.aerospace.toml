@@ -80,15 +80,15 @@ key-mapping.preset = 'qwerty'
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
-gaps.inner.horizontal = 4
-gaps.inner.vertical =   4
-gaps.outer.left =       4
+gaps.inner.horizontal = 6
+gaps.inner.vertical =   6
+gaps.outer.left =       12
 gaps.outer.bottom =     4
 gaps.outer.top = [
     { monitor."LC34G55T" = 36 },
-    4
+    8
 ]
-gaps.outer.right =      4
+gaps.outer.right =      12
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
