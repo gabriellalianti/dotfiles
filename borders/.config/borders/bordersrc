@@ -8,7 +8,7 @@ options=(
   # active_color=0xffffffff
   # active_color=0xffe78284
   # active_color=0xff00ff00
-  # inactive_color=0xff414550
+  inactive_color=0xff414550
 )
 
 borders "${options[@]}"
