@@ -63,7 +63,7 @@ alias rudb='rustup doc --book'
 alias cser='cselab run'
 alias csea="cser '6991 autotest'"
 alias cseg="cser '6991 give-crate'"
-alias csem="cser '6991 classrun -sturec'"
+alias csemarks="cser '6991 classrun -sturec'"
 alias csec='cselab clean'
 
 # hide and show desktop files
