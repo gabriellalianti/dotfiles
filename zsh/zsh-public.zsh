@@ -41,10 +41,7 @@ alias dotf='cd dotfiles'
 alias nvpub='nvim ~/dotfiles/zsh/zsh-public.zsh'
 alias nvpriv='nvim ~/dotfiles/zsh/zsh-private.zsh'
 alias repos='cd ~/repos'
-alias cfre='cd ~/repos/devsoc/freerooms-mobile'
 alias cios='cd ~/repos/devsoc/freerooms-mobile/ios'
-alias coup='cd ~/repos/create/pouc/'
-alias 6991='cd ~/repos/comp/comp6991'
 alias 6080='cd ~/repos/tutoring/comp6080/'
 
 alias py3='python3'
@@ -61,9 +58,6 @@ alias ruds='rustup doc --std'
 alias rudb='rustup doc --book'
 
 alias cser='cselab run'
-alias csea="cser '6991 autotest'"
-alias cseg="cser '6991 give-crate'"
-alias csemarks="cser '6991 classrun -sturec'"
 alias csec='cselab clean'
 
 # hide and show desktop files
@@ -80,7 +74,7 @@ eval "$($HOMEBREW_PREFIX/bin/brew shellenv)"
 # copy wezterm config from wsl to windows
 alias sync-wezterm="cp ~/dotfiles/wezterm/.wezterm.lua /mnt/c/Users/Gabriella/.wezterm.lua"
 
-# fuzzy find (ctrl+T) 
+# fuzzy find (ctrl+T)
 # ssh **, cd **
 # ctrl+R for history
 eval "$(fzf --zsh)"
@@ -113,7 +107,7 @@ eval "$(atuin init zsh)"            # override fzf's ctrl+r
 source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
-# previews with eza and bat from josean martinez on yt : )
+# previews with eza and bat from josean martinez on yt
 show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
 export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
