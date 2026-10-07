@@ -8,7 +8,7 @@ sketchybar --bar \
   position=top \
   height=36 \
   y_offset=2 \
-  margin=8 \
+  margin=4 \
   corner_radius=12 \
   color="$BAR_COLOR" \
   border_color="$BAR_BORDER_COLOR" \
